@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ApiRequest;
 use App\Repository\ConvertToDecimalRepository;
-use Exception;
 
 class ApiController extends Controller
 {

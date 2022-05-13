@@ -1,64 +1,60 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Api Números Romanos
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+ Api desenvolvida para teste da empresa Studio Sol
 
-## About Laravel
+# Documentação Api
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+ ##  Como abrir o código em seu computador!
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Baixe o arquivo zip e o descompacte, depois o abra em seu editor de código fonte de preferência.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Como Utilizar a Api
 
-## Learning Laravel
+Na pasta do projeto, em seu termminal execute o seguinte comando:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```./vendor/bin/sail up```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Após executar o comando abra o *Insominia* ou o *Postman* e execute os próximos passos:
 
-## Laravel Sponsors
+* Execute uma request *POST*  no endpoint ```http://0.0.0.0:80/api/search```
+  
+  ![POST](/img-doc/POST.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+* No **Body** de sua requisição passe um *JSON* com o nome do campo como **text** e o valor passado deve ser número romano válido, siga o exemplod de JSON abaixo:
+  ```
+  {
+	"text": "XL"
+  }
+  ```
 
-### Premium Partners
+  ![JSON](/img-doc/JSON.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+* Nos **Headers** de sua requisição passe estes dois campos com seus respectivos valores:
+  ```
+    Accept: application/json
+    Content-Type: application/json
+  ```
 
-## Contributing
+  ![HEADER](/img-doc/HEADER.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Depois de seguir os passos você receberá **200OK** e o *JSON* abaixo com a resposta de sua requisição:
+  ```
+  {
+    "number": "XL",
+    "value": 40
+  }
+  ```
 
-## Code of Conduct
+  ![200OK](img-doc/200OK.png)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Casos de erro da requisição
 
-## Security Vulnerabilities
+ * Primeiro caso, se você passar não passar um número romano ou não passar a key **text** o retorno de erro será **422 Unprocessable Content** com *JSON* contendo a mensagem de erro, como os exemplos abaixo:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    ![ERROR422](/img-doc/ERROR422.png)
+    ![RESPONSE_ERROR_422](/img-doc/RESPONSE_ERROR_422.png)
 
-## License
+ * Segundo caso, se você se esquecer de passar os campos do **Headers** o retorno de erro será **404 Not Found**, como os exemplos abaixo:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    ![HEADER_ERROR](/img-doc/HEADER_ERROR.png)
+    ![404_NOT_FOUND](/img-doc/404_NOT_FOUND.png)
