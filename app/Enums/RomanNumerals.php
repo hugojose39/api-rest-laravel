@@ -28,7 +28,7 @@ class RomanNumerals
 
     public static function convertRomanToInteger(string $roman): int
     {
-        // Retorna os algaritmos romanos com seus respectivos valores decimais.
+        // Retorna os algaritmos romanos com seus respectivos valores inteiros.
         return match ($roman) {
             self::ROMAN_NUMERAL_I => 1,
             self::ROMAN_NUMERAL_V => 5,
