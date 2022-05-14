@@ -15,7 +15,7 @@ class ConvertToDecimalRepository
 
         //Inicializa o loop para iterar na string.
         for ($i = 0; $i < strlen($roman); $i++) {
-            //Verifica o elemento atual não é menor que o anterior.
+            //Verifica se o elemento atual não é menor que o anterior.
             if($i > 0 && $this->convert($roman[$i]) > $this->convert($roman[$i - 1])) {
                 $result += $this->convert($roman[$i]) - 2 * $this->convert($roman[$i - 1]);
             } else {
