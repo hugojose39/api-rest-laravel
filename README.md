@@ -29,7 +29,7 @@ Baixe o arquivo zip e o descompacte, depois o abra em seu editor de código de p
 
     Está classe é um enum responsável por passar os 7 algarismos romanos e seus respectivos valores decimais.
 
-### ConvertToDecimalRepository
+### ConvertToIntegerRepository
 
     Está classe é a responsável por possuir nossa regra de negócio, é onde são efetuadas as devidas transformações de nossos alagarismos romanos em números decimais.
 
@@ -57,7 +57,7 @@ Após executar o comando abra o *Insomnia* ou o *Postman* e execute os próximos
 
   ![JSON](/img-doc/JSON.png)
 
-* Nos **Headers** de sua requisição passe estes dois campos com seus respectivos valores:
+* No **Header** de sua requisição passe estes dois campos com seus respectivos valores:
   ```
     Accept: application/json
     Content-Type: application/json
@@ -82,7 +82,7 @@ Após executar o comando abra o *Insomnia* ou o *Postman* e execute os próximos
     ![ERROR422](/img-doc/ERROR422.png)
     ![RESPONSE_ERROR_422](/img-doc/RESPONSE_ERROR_422.png)
 
- * Segundo caso, se você se esquecer de passar os campos do **Headers** o retorno de erro será **404 Not Found**, como os exemplos abaixo:
+ * Segundo caso, se você se esquecer de passar os campos do **Header** o retorno de erro será **404 Not Found**, como os exemplos abaixo:
 
     ![HEADER_ERROR](/img-doc/HEADER_ERROR.png)
     ![404_NOT_FOUND](/img-doc/404_NOT_FOUND.png)

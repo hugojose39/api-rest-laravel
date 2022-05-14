@@ -4,9 +4,9 @@ namespace App\Repository;
 
 use App\Enums\RomanNumerals;
 
-class ConvertToDecimalRepository
+class ConvertToIntegerRepository
 {
-    public function convertToDecimal(string $roman): int
+    public function convertToInteger(string $roman): int
     {
         //Cria uma variável inteira para armazenar o resultado.
         $result = 0;
@@ -28,7 +28,7 @@ class ConvertToDecimalRepository
 
     public function convert(string $roman): int
     {
-        //Retorna o algarismo romano transformado em número decimal.
+        //Retorna o algarismo romano transformado em número inteiro.
         return RomanNumerals::convertRomanToInteger($roman);
     }
 }
