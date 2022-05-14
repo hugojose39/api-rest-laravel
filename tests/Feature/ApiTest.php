@@ -8,6 +8,7 @@ class ApiTest extends TestCase
 {
     public function test_the_application_returns_a_successful_response()
     {
+        //Testa quando a requisição funcionar corretamente.
         $response = $this->postJson(route('api.search'), ['text'=> "XL"]);
 
         $response->assertStatus(200)->assertJson([
@@ -18,6 +19,7 @@ class ApiTest extends TestCase
 
     public function test_the_application_returns_a_not_successful_response()
     {
+        //Testa quando a requisição vier a falhar.
         $response = $this->postJson(route('api.search'), ['text'=> "XLS"]);
 
         $response->assertStatus(422)->assertJsonPath(

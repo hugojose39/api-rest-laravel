@@ -14,6 +14,7 @@ class ApiRequest extends FormRequest
 
     public function rules(): array
     {
+        //Retorna uma validação da requisição enviada.
         return [
             'text' => ['required', new IsRomanNumeral()],
         ];

@@ -17,7 +17,7 @@ Baixe o arquivo zip e o descompacte, depois o abra em seu editor de código de p
 
     Está é a classe controladora de nossa Api, ela verifica a validação validação de nossa requisição funcionou e nos retorno a resposta com o status da requisição e sua responsa em *JSON*.
 
-### ApiRequest.php
+### ApiRequest
 
     Está é a classe responsável por fazer a verificações para a validação da requisição enviada.
 
@@ -25,7 +25,7 @@ Baixe o arquivo zip e o descompacte, depois o abra em seu editor de código de p
 
     Está é a classe onde fica localizada a nossa regra de validação da requisição.
 
-### IsRomanNumeral
+### RomanNumerals
 
     Está classe é um enum responsável por passar os 7 algarismos romanos e seus respectivos valores decimais.
 

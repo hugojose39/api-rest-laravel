@@ -14,6 +14,7 @@ class RomanNumerals
 
     public static function all(): array
     {
+        // Retorna um array com os 7 algarismos romanos.
         return [
             self::ROMAN_NUMERAL_I,
             self::ROMAN_NUMERAL_V,
@@ -27,6 +28,7 @@ class RomanNumerals
 
     public static function convertRomanToInteger(string $roman): int
     {
+        // Retorna os algaritmos romanos com seus respectivos valores decimais.
         return match ($roman) {
             self::ROMAN_NUMERAL_I => 1,
             self::ROMAN_NUMERAL_V => 5,
