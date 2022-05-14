@@ -8,15 +8,43 @@
 
 Baixe o arquivo zip e o descompacte, depois o abra em seu editor de código fonte de preferência.
 
-## Como Utilizar a Api
+## Quais são as classes relacionadas a Api e suas respectivas funcionalidades:
+
+### api.php
+
+    É onde está localizada a montagem da rota para efetuar a requisição.
+### ApiController
+
+    Está é a classe controladora de nossa Api, ela verifica a validação validação de nossa requisição funcionou e nos retorno a resposta com o status da requisição e sua responsa em *JSON*.
+
+### ApiRequest.php
+
+    Está é a classe responsável por fazer a verificações para a validação da requisição enviada.
+
+### IsRomanNumeral
+
+    Está é a classe onde fica localizada a nossa regra de validação da requisição.
+
+### IsRomanNumeral
+
+    Está classe é um enum responsável por passar os 7 algarismos romaos e seus respectivos valores decimais.
+
+### ConvertToDecimalRepository
+
+    Está classe é a responsável por possuir nossa regra de negócio, é onde são efetuadas as devidas transformações de nossos alagarismos romanos em números decimais.
+
+### ApiTest
+
+    Está é a classe responsável por executar nossos testes na rota e suas respectivas respostas.
+
+# Como Utilizar a Api
 
 Na pasta do projeto, em seu termminal execute o seguinte comando:
-
 ```./vendor/bin/sail up```
 
 Após executar o comando abra o *Insominia* ou o *Postman* e execute os próximos passos:
 
-* Execute uma request *POST*  no endpoint ```http://0.0.0.0:80/api/search```
+* Execute uma request *POST*  no endpoint:  ```http://0.0.0.0:80/api/search```
   
   ![POST](/img-doc/POST.png)
 
