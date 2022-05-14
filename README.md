@@ -6,7 +6,7 @@
 
  ##  Como abrir o código em seu computador!
 
-Baixe o arquivo zip e o descompacte, depois o abra em seu editor de código fonte de preferência.
+Baixe o arquivo zip e o descompacte, depois o abra em seu editor de código de preferência.
 
 ## Quais são as classes relacionadas a Api e suas respectivas funcionalidades:
 
@@ -27,7 +27,7 @@ Baixe o arquivo zip e o descompacte, depois o abra em seu editor de código font
 
 ### IsRomanNumeral
 
-    Está classe é um enum responsável por passar os 7 algarismos romaos e seus respectivos valores decimais.
+    Está classe é um enum responsável por passar os 7 algarismos romanos e seus respectivos valores decimais.
 
 ### ConvertToDecimalRepository
 
@@ -42,7 +42,7 @@ Baixe o arquivo zip e o descompacte, depois o abra em seu editor de código font
 Na pasta do projeto, em seu termminal execute o seguinte comando:
 ```./vendor/bin/sail up```
 
-Após executar o comando abra o *Insominia* ou o *Postman* e execute os próximos passos:
+Após executar o comando abra o *Insomnia* ou o *Postman* e execute os próximos passos:
 
 * Execute uma request *POST*  no endpoint:  ```http://0.0.0.0:80/api/search```
   
@@ -86,3 +86,18 @@ Após executar o comando abra o *Insominia* ou o *Postman* e execute os próximo
 
     ![HEADER_ERROR](/img-doc/HEADER_ERROR.png)
     ![404_NOT_FOUND](/img-doc/404_NOT_FOUND.png)
+
+# Como testar a Api
+
+* Para testar a api, você deverá estar com o *sail* rodando para isso execute o seguinte comando:
+
+    ```./vendor/bin/sail up```
+
+* Logo após execute o seguinte comando:
+
+    ```./vendor/bin/sail test```
+
+* Ele executará nosso teste que tem o nome de **ApiTest** e retorná o a seguinte resposta:
+
+    ![TEST](/img-doc/TEST.png)
+    ![TEST](/img-doc/TEST_RESPONSE.png)
