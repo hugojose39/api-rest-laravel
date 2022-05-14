@@ -97,7 +97,7 @@ Após executar o comando abra o *Insomnia* ou o *Postman* e execute os próximos
 
     ```./vendor/bin/sail test```
 
-* Ele executará nosso teste que tem o nome de **ApiTest** e retorná o a seguinte resposta:
+* Ele executará nosso teste que tem o nome de **ApiTest** e retorná a seguinte resposta:
 
     ![TEST](/img-doc/TEST.png)
     ![TEST](/img-doc/TEST_RESPONSE.png)
