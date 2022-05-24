@@ -1,7 +1,4 @@
 # Api Números Romanos
-
- Api desenvolvida para teste da empresa Studio Sol
-
 # Documentação Api
 
  ##  Como abrir o código em seu computador!
